@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Waiting+for+the+Sunrise&display=swap');
+
+:root {
+    --principal-color: #0063B2;
+    --secondary-color: #9CC3D5;
+    --light-color: #F1F6FD;
+
+    --text-color: #263238;
+
+    --whatsapp-color: #41ce4a;
+
+    --forte-color: #2C1657;
+    --fraco-color: #d6d0e2;
+    --fraco-color-transp: rgba(214, 208, 226, 0.8);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Poppins", sans-serif;
+    color: var(--light-color);
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #2C1657;
+}
+
+.marca {
+    font-family: 'Julius Sans One', Arial, sans-serif;
+    font-size: 7vw;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    cursor: default;
+    line-height: 0.8;
+    margin-left: -0.10em;
+}
+
+.marca:hover {
+    color: white;
+}
+
+.script {
+    font-family: 'Waiting for the Sunrise', sans-serif;
+}
+
+.containerFlex {
+    display: flex;
+    align-items: center;
+    
+    margin: auto;
+
+    width: 1500px;
+    max-width: 90%;
+
+    justify-content: space-between;
+}
+
+h2 {
+    line-height: 130%;
+}
+
+p {
+    line-height: 2rem;
+}
+
+button {
+    transition: all 0.2s;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.btnPrimary {
+    background: linear-gradient(130deg, rgba(140, 122, 174, 0.8), rgba(90, 68, 132, 0.8));
+    padding: 1rem 2rem;
+    font-family: 'Julius Sans One', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btnPrimary:hover {
+    background: linear-gradient(130deg, rgba(140, 122, 174, 1), rgba(90, 68, 132, 1));
+    transform: translateY(-2px);
+}
+
+.btnSecondary {
+    background-color: rgba(255, 255, 255, 0.10);
+    border: none;
+    border-radius: 2rem;
+    
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btnSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+
+    span, img {
+        animation: rotate 0.5s;
+    }
+}
+
+#bannerInicial {
+    background-image: url("../img/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 95vh;
+}
+
+.containerInicial {
+    height: 100%;
+}
+
+.containerInicialEsquerda {
+    /* width: 48%; */
+    width: 100%;
+}
+
+.containerInicialEsquerda h2 {
+    font-size: 1.7vw;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: lightgray;
+}
+
+.containerInicialEsquerda p {
+    padding: 1rem 0 2rem;
+    color: lightgray;
+}
+
+.containerInicialBotoes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .containerIcones {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+}
+
+.btnSeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+.btnSetaLarge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.containerInicialDireita {
+    display: none;
+    /* width: 48%; */
+}
+
+#colecoes {
+    padding-top: 1rem;
+    padding-bottom: 10rem;
+}
+
+.containerColecoes {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.containerColecoes h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 4vw;
+    padding-bottom: 2rem;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background: linear-gradient(130deg, rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.05));
+    padding: 1.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.20);
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+
+.card p {
+    line-height: 1.5rem;
+    color: lightgray;
+}
+
+.card .icone span {
+    display: flex;
+    justify-content: right;
+}
+
+.card-pulseira {
+    background-color: var(--fraco-color-transp);
+    overflow: hidden;
+
+    border-radius: 0.50rem;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 2px solid var(--fraco-color-transp);
+    cursor: default;
+
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    transition: all 0.5s;
+
+    h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 0 0.25rem;
+        
+        background-color: var(--fraco-color-transp);
+        backdrop-filter: blur(2px);
+        color: var(--forte-color);
+        text-align: center;
+
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+.card-pulseira:hover {
+    transform: translateX(-1rem);
+}
+
+#faixa {
+    background: linear-gradient(130deg, rgba(140, 122, 174, 1), rgba(90, 68, 132, 1));
+    padding: 40px 0;
+}
+
+.containerFaixa {
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+
+    h2 {
+        font-size: 4vw;
+        line-height: 130%;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: lightgray;
+    }
+}
+
+#produtos {
+    padding: 10rem 0;
+}
+
+.containerProdutos {
+    align-items: start;
+    gap: 5rem;
+}
+
+.containerProdutosEsquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    position: sticky;
+    width: 60%;
+    top: 35vh;
+    /* top: 50%; */
+    /* transform: translateY(-50%); */
+}
+
+.containerProdutosEsquerda h2 {
+    font-size: 4vw;
+}
+
+.containerProdutosEsquerda a {
+    width: fit-content;
+}
+
+.containerProdutosDireita {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.containerProdutosDireita .card {
+    width: 100%;
+}
+
+.iconePreenchido {
+    display: flex;
+    justify-content: right;
+}
+
+.iconePreenchido span {
+    width: max-content;
+    background: linear-gradient(130deg, rgba(140, 122, 174, 1), rgba(90, 68, 132, 1));
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+footer {
+    background-color: #462E74;
+    padding-top: 3rem;    
+
+    .containerFooter {
+       flex-direction: row;
+       align-items: end;
+       justify-content: space-between;
+    
+       padding-bottom: 3rem;
+    
+       .containerEsquerda {
+           display: flex;
+           flex-direction: column;
+           align-items: start;
+           justify-content: center;
+       }
+
+       .containerDireita {
+           display: flex;
+           flex-direction: row;
+           align-items: end;
+           justify-content: center;
+           gap: 2rem;
+    
+           a {
+               transition: all 0.3s;
+           }
+           a:hover {
+               cursor: pointer;
+               transform: translateY(-2px);
+           }
+       }
+
+        .marca {
+            font-size: 2rem;
+        }
+    }
+}
+
+.desenvolvido-por {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    background-color: #29323e;
+    width: 100%;
+    height: auto;
+    padding: 0.25rem 0;
+
+    .description {
+        font-size: 0.8rem;
+
+        * {
+            text-decoration: none;
+        }
+    }
+
+    .redes-sociais {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        min-width: 100px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            border-radius: 0.25rem;
+            
+            background-color: #3f4752;
+            
+            img {
+                width: 15px;
+                height: 15px;
+            }
+
+            &:hover {
+                background-color: #696969;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .card-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #produtos {
+        .containerProdutos {
+            gap: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #bannerInicial {
+        .marca {
+            font-size: 7rem;
+        }
+        h2 {
+            font-size: 2rem;
+        }
+
+        .containerInicialEsquerda {
+            width: 100%;
+        }
+    
+        .containerInicialDireita {
+            display: none;
+        }
+    }
+
+    .card-pulseira {
+        width: 60vw;
+        height: auto;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #bannerInicial {
+        .marca {
+            font-size: 4rem;
+        }
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        .btnPrimary {
+            padding: 1rem 2rem;
+        }
+
+        .containerInicialEsquerda {
+            width: 100%;
+        }
+    
+        .containerInicialDireita {
+            display: none;
+        }
+    }
+
+    #colecoes {
+        padding-bottom: 5rem;
+
+        .containerColecoes h2 {
+            font-size: 2rem;
+        }
+    }
+
+
+    .card-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .containerFaixa h2 {
+        font-size: 2rem;
+    }
+
+    #produtos {
+        padding: 5rem 0;
+        
+        .containerProdutos {
+            flex-direction: column;
+            gap: 3rem;
+
+            .containerProdutosEsquerda {
+                position: unset;
+                width: 100%;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .card-pulseira {
+        width: 90vw;
+        height: auto;
+
+        img {
+            width: inherit;
+            height: inherit;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+    }
+
+    .card-pulseira:hover {
+        transform: none;
+    }
+
+    footer {
+        padding-top: 2rem;
+
+        .containerFooter{
+            height: 8rem;
+            padding-bottom: 2rem;
+
+            .containerEsquerda {
+                height: 100%;
+            }
+
+            .containerDireita {
+                flex-direction: column;
+                gap: 1rem;
+                height: 100%;
+    
+                .btnSetaLarge {
+                    width: unset;
+                    height: unset;
+
+                    padding: 0.5rem;
+    
+                    img {
+                        width: 25px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
